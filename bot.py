@@ -52,7 +52,7 @@ async def on_member_join(member):
 
 @bot.event
 async def on_command_error(ctx, error: Exception):
-    if ctx.channel.id == bots_channel:
+    if ctx.channel.id == bots_channel:960270092610994216
         if isinstance(error, commands.CommandOnCooldown):
             embed = discord.Embed(color=16379747, description=f'{error}')
             await ctx.send(embed=embed)
