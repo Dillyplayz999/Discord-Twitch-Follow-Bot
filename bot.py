@@ -11,16 +11,16 @@ import re
 import os
 
 ctypes.windll.kernel32.SetConsoleTitleW('zoom')
-token = ''
+token = 'OTUxMjIyNTQ0OTQ0NDg4NDU4.YikVBw.SrvVmBiRjcCikF2UOntl-1E91Qo'
 prefix = '/'
 
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix=prefix, case_insensitive=True, intents=intents)
 bot.remove_command('help')
 
-administrators = []
-chat_channel = ''
-bots_channel = ''
+administrators = [871027314438328391]
+chat_channel = '960270092610994216'
+bots_channel = '960270092610994216'
 queue = []
 
 def zoom():
@@ -124,7 +124,7 @@ async def tasks(ctx):
         else:
             await ctx.message.delete()
 
-tfollow_cooldown = []
+tfollow_cooldown = [2]
 
 @bot.command()
 @commands.cooldown(1, 600, type=commands.BucketType.user)
@@ -238,6 +238,6 @@ async def tspam(ctx, channel, *, msg):
             embed = discord.Embed(color=16379747, description='You do not have permission to run this command!')
             await ctx.send(embed=embed)
 
-rfollow_cooldown = []
+rfollow_cooldown = [2]
 
 bot.run(token)
